@@ -1,4 +1,4 @@
-# vendor-prefix [![Build Status](https://secure.travis-ci.org/peutetre/vendor-prefix.png)](http://travis-ci.org/peutetre/vendor-prefix)
+# vendor-prefix [![Build Status](https://secure.travis-ci.org/peutetre/vendor-prefix.png)](http://travis-ci.org/peutetre/vendor-prefix) [![Mocha Saucelabs Tests Status](https://saucelabs.com/buildstatus/vendor-prefix)](https://saucelabs.com/u/vendor-prefix)
 
   add a vendor prefix to a css attribute
 
@@ -41,5 +41,9 @@ Throw an error if the given string is not a css property.
 
     $ npm install
     $ npm run build
+
+<a href="https://saucelabs.com/u/vendor-prefix">
+  <img src="https://saucelabs.com/browser-matrix/vendor-prefix.svg" alt="Selenium Tests Status" />
+</a>
 
 open a browser at `test/index.html`
