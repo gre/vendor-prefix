@@ -1,18 +1,15 @@
-
-# prefix
+# vendor-prefix [![Build Status](https://secure.travis-ci.org/peutetre/vendor-prefix.png)](http://travis-ci.org/peutetre/vendor-prefix)
 
   add a vendor prefix to a css attribute
 
-## Installation
+This is a fork from https://github.com/jkroso/prefix which is a fork of https://github.com/pgherveou/prefix
 
-_With [packin](//github.com/jkroso/packin) or [component](//github.com/component/component)_
+## Usage
 
-    $ packin add jkroso/prefix
-
-then in your app:
+    $ npm install vendor-prefix
 
 ```js
-var prefix = require('prefix')
+var prefix = require('vendor-prefix');
 ```
 
 ## API
@@ -22,19 +19,27 @@ var prefix = require('prefix')
   Prefix `key`. This function memoizes its results so you don't need to worry about any performance issues, just treat it like a map.
 
 ```js
-prefix('transform') // => webkitTransform
-prefix('color') // => color
+prefix('transform'); // webkitTransform
+prefix('color'); // color
 ```
+
+Throw an error if the given string is not a css property.
 
 ### dash(key)
 
   create a dasherize version of a vendor prefix
 
 ```js
-prefix.dash('transform') // => -webkit-transform
-prefix.dash('color') // => color
+prefix.dash('transform'); // -webkit-transform
+prefix.dash('color'); // color
+prefix.dash('background-color'); // background-color
 ```
 
-## Running the tests
+Throw an error if the given string is not a css property.
 
-Just run `make` and navigate your browser to the test directory.
+## Run the tests
+
+    $ npm install
+    $ npm run build
+
+open a browser at `test/index.html`
